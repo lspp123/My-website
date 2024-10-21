@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home-desine.css">
+    <link rel="stylesheet" href="/css/home-desine.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&family=Esteban&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
@@ -11,13 +11,22 @@
 </head>
 
 <script>
-    fetch('header.html')
-            .then(response => response.text()) // Fetch the header content
+    fetch('/components/header.html')
+            .then(response => response.text())
             .then(data => {
-                document.querySelector('.navbar-holder').innerHTML = data; // Insert the content into .navbar-holder
+                document.querySelector('.navbar-holder').innerHTML = data;
             })
             .catch(error => {
-                console.error('Error loading the header:', error); // Log any error that occurs
+                console.error('Error loading the header:', error);
+            });
+
+    fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer-holder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error);
             });
 </script>
 
@@ -84,5 +93,7 @@
             </div>
         </li>
     </ul>
+
+    <div class="footer-holder"></div>
 </body>
 </html>
