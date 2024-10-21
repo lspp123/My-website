@@ -33,3 +33,10 @@ hr {
 ul {
     list-style-type: none;
 }
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+}

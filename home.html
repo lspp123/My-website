@@ -9,7 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&family=Esteban&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
+
+<script>
+    fetch('header.html')
+            .then(response => response.text()) // Fetch the header content
+            .then(data => {
+                document.querySelector('.navbar-holder').innerHTML = data; // Insert the content into .navbar-holder
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error); // Log any error that occurs
+            });
+</script>
+
 <body>
+
+    <div class="navbar-holder"></div>
+
     <h1> Welcome to my website! </h1>
     <ul>
         <li class="About">
@@ -64,7 +79,7 @@
                 2020 – Present <br> Youth Parliament representative at municipal ceremonies and events in Rishon LeZion, including event hosting. <hr>
                 2021 – Present <br> Chair of the Elections Committee in the Youth Parliament. <hr>
                 2023 – Present <br> School representative in the "Infinity" project of the OECD. <hr>
-                2022 – Present <br> Member of the youth community of the advertising and content marketing firm	"Teenk." <hr>
+                2022 – Present <br> Member of the youth community of the advertising and content marketing firm	"Teenk."
 
             </div>
         </li>
