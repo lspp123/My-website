@@ -15,23 +15,15 @@ h1 {
     font-size: 40px;
 }
 
-/*.Seperates {
-    width: 60%;
-    margin-top: 20px;
-}*/
-
 div {
-    width: 60%;
     font-size: 20px;
     margin: 0 auto;
+    width: 600px
 }
 
 hr {
-    width: 20%;
-}
-
-ul {
-    list-style-type: none;
+    width: 80%;
+    height:2px
 }
 
 .navbar a {
@@ -39,4 +31,13 @@ ul {
     color: #333;
     font-size: 18px;
     padding: 10px 15px;
+}
+
+img {
+    width: 500px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
